@@ -8,7 +8,8 @@
     #placeholder { border:1px solid #eee; padding:4px; }
     ul {list-style: none;}
     img { width: 10%; }
-    
+
+       
     </style>
 </head>
 
@@ -50,6 +51,26 @@
             }
         }]
     }
+
+
+    // document.getElementById("placeholder").innerHTML =
+    // data.portfolios[0].title + " // " + data.portfolios[0].description;
+
+    var output = "<ul>";
+
+    for ( var i in data.portfolios ) {
+        output += "<li>" + 
+        "<img src=" +
+        data.portfolios[i].imageurl.img1 + " />" +
+        data.portfolios[i].title + " // " + 
+        data.portfolios[i].date + " // " + 
+        data.portfolios[i].description + " // " + 
+        "</li>";
+    }
+
+    output += "</ul>";
+
+    document.getElementById("placeholder").innerHTML = output;
 
     </script>
 </body>
